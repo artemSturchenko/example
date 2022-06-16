@@ -1,0 +1,29 @@
+<%- include('partials/header.ejs') %>
+    <!-- Пример отдельной кнопки danger -->
+
+    <div class="container">
+        <h2>Dropdowns</h2>
+        <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+        <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and
+            data-toggle="dropdown".</p>
+        <form action="/pricing" method="post">
+            <select name="selectCable">
+                <% resultToRender.forEach(function(el){ %>
+                    <option>
+                        <%=el%>
+                    </option>
+                    <% }) %>
+            </select>
+            <select name="selectCurrency">
+                <% resultToRender2.forEach(function(el){ %>
+                    <option>
+                        <%=el%>
+                    </option>
+                    <% }) %>
+            </select>
+            <button class="btn btn-sm btn-primary btn-block" type="submit" width="25">Get result</button>
+        </form>
+    </div>
+
+    <%- include('partials/footer.ejs') %>

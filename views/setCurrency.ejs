@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') %>
+
+  <form method='post' action="/setCurrency">
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">EUR</span>
+      </div>
+      <div class="col-xs-3">
+        <input type="number" step="0.01" name="EUR" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">RUB</span>
+      </div>
+      <div class="col-xs-3">
+        <input type="number" step="0.01" name="RUB" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">BYN</span>
+      </div>
+      <div class="col-xs-3">
+        <input type="number" step="0.01" name="BYN" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">USD</span>
+      </div>
+      <div class="col-xs-3">
+        <input type="number" step="0.01" name="USD" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-lg">
+      </div>
+    </div>
+    <button class="btn btn-sm btn-primary btn-block" type="submit" width="25">Set up values</button>
+  </form>
+
+  <%- include('partials/footer.ejs') %>

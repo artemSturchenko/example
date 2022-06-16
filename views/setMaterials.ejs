@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') -%>
+<form action="/setMaterials" method="post">
+    <button class="btn btn-sm btn-primary btn-block" type="submit" width="25">Set up values</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Материал</th>
+                <th scope="col">Установить значение в $</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% resultToRender.forEach(function(el){ %>
+                <tr>
+                    <th scope="row">
+                        <%=el.materialsName%>
+                    </th>
+                    <td>
+                        <input type="number" step="0.01" name="setupValue" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+</form>
+<%- include('partials/footer.ejs') -%>
+<%- include('partials/footer.ejs') -%>
